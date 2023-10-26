@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" integrity="sha512-AZtJoEn5SfSZimv10x5NMO2gaZCdoU8nxtHJK8O4SbKNlQeb1ggkvf0b0QixuuXIjX3Tp5jzBbTWajki81Vl2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 20%;
+    width: 100%;
+}
+#navlink{
+position: relative;
+color: #000;
+font-weight: 700;
+transition: 1.2s;text-align: center;
+}
+
+#navlink::after{
+content: "";
+position: absolute;
+width: 0%;
+height: 2.7px;
+background-color:  #000;
+left: 0;
+bottom: -4px;
+transition: ease .43s;
+}
+#navlink:hover::after{
+width: 100%;
+}
+#navlink:hover{
+    color: rgb(255, 217, 0);
+}
+
+
+
+#btn{
+    padding: 1.7% 7%;
+    border:none;
+    border-radius: 50px;
+    border: 1.5px solid #fff;
+    color: #fff;
+    cursor: pointer;    
+    background-color: transparent;
+transition:  1.2s;
+}
+#btn:hover{
+    background-color: rgb(255, 217, 0);
+}
+*::selection{
+    background-color:rgb(255, 217, 0);
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    
+
+
+<nav style="background: transparent; box-shadow: none;" class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">PORTFOIO</a>
+          <button style="color: #000;"
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div  class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a id="navlink" class="nav-link active" href="#">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="navlink" class="nav-link active" href="#">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="navlink" class="nav-link active" href="#">PORTFOLIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="navlink" class="nav-link active" href="#">LOGIN / SIGNUP</a>
+                  </li>
+                  
+                </ul>
+         </div>
+        </div>
+      </nav>
+<!-- Carousel wrapper -->
+<div  id="carouselDarkVariant" class="carousel slide carousel-fade carousel-dark" data-mdb-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button
+        data-mdb-target="#carouselDarkVariant"
+        data-mdb-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        data-mdb-target="#carouselDarkVariant"
+        data-mdb-slide-to="1"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        data-mdb-target="#carouselDarkVariant"
+        data-mdb-slide-to="2"
+        aria-label="Slide 1"
+      ></button>
+    </div>
+  
+    <!-- Inner -->
+    <div class="carousel-inner">
+      <!-- Single item -->
+      <div class="carousel-item active">
+        <img src="./img1.jpg"  class="d-block w-100" alt="Motorbike Smoke"/>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 id="h5">First slide label</h5>
+          <p id="p">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </div>
+  
+      <!-- Single item -->
+      <div class="carousel-item">
+        <img src="./img2.jpg" class="d-block w-100" alt="Mountaintop"/>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 id="h5">Second slide label</h5>
+          <p id="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+  
+      <!-- Single item -->
+      <div class="carousel-item">
+        <img src="./img3.jpg" class="d-block w-100" alt="Woman Reading a Book"/>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 id="h5">Third slide label</h5>
+          <p id="p">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Inner -->
+  
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-mdb-target="#carouselDarkVariant" data-mdb-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-mdb-target="#carouselDarkVariant" data-mdb-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Carousel wrapper -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js" integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js" integrity="sha512-rXm6RiYDlz+aZC/ht75tGzeAmCg4gVfBA6Be5s5uENSahiXkgwEy10J2Cc+dxUAW4lRRQYbS5pugMOqBrs8ksw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
